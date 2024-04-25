@@ -27,13 +27,13 @@ export class ProfileComponent {
   user: any = {};
   isloading: boolean = true;
   id: String ='';
-  apiurl:String = 'https://angular-backend-y9ve.onrender.com/api/getuserdetails';
+  apiurl:String = 'http://localhost:4000/api/getuserdetails';
   confessions:any=[];
 
   fetchUser = async () => {
 
     if(this.id) {
-      this.apiurl = `https://angular-backend-y9ve.onrender.com/api/getuserdetailsbyid/${this.id}`;
+      this.apiurl = `http://localhost:4000/api/getuserdetailsbyid/${this.id}`;
     }
 
 
@@ -66,7 +66,7 @@ export class ProfileComponent {
 
   fetchConfessions = async () => {
     try {
-      const url = new URL(`https://angular-backend-y9ve.onrender.com/api/confessionbyid/${this.id}`);
+      const url = new URL(`http://localhost:4000/api/confessionbyid/${this.id}`);
       const response = await fetch(url, {
         method: 'GET',
         headers: {

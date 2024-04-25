@@ -27,7 +27,7 @@ export class HomeComponent {
   getConfessions = async () => {
     try {
       this.isloding = true;
-      const response = await fetch('https://angular-backend-y9ve.onrender.com/api/confessions', {
+      const response = await fetch('http://localhost:4000/api/confessions', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

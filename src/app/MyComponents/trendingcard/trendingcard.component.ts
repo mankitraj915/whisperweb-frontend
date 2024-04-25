@@ -13,7 +13,7 @@ export class TrendingcardComponent {
   fetchTrending = async () => {
     try {
       const response = await fetch(
-        'https://angular-backend-y9ve.onrender.com/api/trendingconfessions',
+        'http://localhost:4000/api/trendingconfessions',
         {
           method: 'GET',
           headers: {

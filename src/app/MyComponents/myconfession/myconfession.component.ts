@@ -23,7 +23,7 @@ export class MyconfessionComponent {
     try {
       this.isloding = true;
       const response = await fetch(
-        'https://angular-backend-y9ve.onrender.com/api/userconfessions',
+        'http://localhost:4000/api/userconfessions',
         {
           method: 'GET',
           headers: {

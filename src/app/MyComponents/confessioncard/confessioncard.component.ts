@@ -34,7 +34,7 @@ export class ConfessioncardComponent {
     try {
       this.isloding = true;
       const response = await fetch(
-        `https://angular-backend-y9ve.onrender.com/api/updatelikes/${id}`,
+        `http://localhost:4000/api/updatelikes/${id}`,
         {
           method: 'PATCH',
           headers: {
@@ -73,7 +73,7 @@ export class ConfessioncardComponent {
   postComment = async (id: string) => {
     try {
       const response = await fetch(
-        `https://angular-backend-y9ve.onrender.com/api/addcomment/${id}`,
+        `http://localhost:4000/api/addcomment/${id}`,
         {
           method: 'PATCH',
           headers: {
@@ -101,7 +101,7 @@ export class ConfessioncardComponent {
   reportConfession = async (id: string) => {
     try {
       const response = await fetch(
-        `https://angular-backend-y9ve.onrender.com/api/reportconfession/${id}`,
+        `http://localhost:4000/api/reportconfession/${id}`,
         {
           method: 'PATCH',
           headers: {
@@ -135,7 +135,7 @@ export class ConfessioncardComponent {
       this.confession = null;
 
       const response = await fetch(
-        `https://angular-backend-y9ve.onrender.com/api/deleteconfession/${id}`,
+        `http://localhost:4000/api/deleteconfession/${id}`,
         {
           method: 'DELETE',
           headers: {
